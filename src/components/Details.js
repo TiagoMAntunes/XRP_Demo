@@ -36,7 +36,7 @@ export default class Details extends Component {
                   <h1>model : {title}</h1>
                   <h4 className="text-blue">
                     <strong>
-                      price : <span>$</span>
+                      price : <span>XRP </span>
                       {price}
                     </strong>
                   </h4>

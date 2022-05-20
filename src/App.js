@@ -8,7 +8,13 @@ import Details from "./components/Details";
 import Default from "./components/Default";
 import Cart from "./components/Cart";
 import Modal from "./components/Modal";
+import { setup } from "./payments";
+
 class App extends Component {
+  componentDidMount() {
+    setup();
+  }
+
   render() {
     return (
       <React.Fragment>

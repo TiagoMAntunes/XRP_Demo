@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { pay } from "../../payments";
 export default class CartTotals extends Component {
   render() {
     const {
@@ -40,6 +41,17 @@ export default class CartTotals extends Component {
                   <span className="text-title"> total :</span>{" "}
                   <strong>$ {cartTotal} </strong>
                 </h5>
+                {/* This is where the payment button goes */}
+                <button
+                  className="btn btn-outline-danger text-uppercase mb-3 px-5"
+                  type="button"
+                  onClick={() => {
+                    // history.push("/payment");
+                    pay(cartTotal);
+                  }}
+                >
+                  proceed to checkout
+                </button>
               </div>
             </div>
           </div>
